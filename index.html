@@ -69,6 +69,22 @@
         <div class="postagens-feitas">
             <h2>Postagens Feitas</h2>
         
+            <!-- Filtro para as Categorias -->
+            <div class="filter-form">
+                <label for="filter-categoria">Filtrar por Categoria:</label>
+                <select id="filter-categoria" onchange="filterPostsByCategory(this.value)">
+                    <option value="0">Todas</option>
+                    <option value="1">Ação</option>
+                    <option value="2">Comédia</option>
+                    <option value="3">Drama</option>
+                    <option value="4">Romance</option>
+                    <option value="5">Documentário</option>
+                    <option value="6">Suspense</option>
+                    <option value="7">Terror</option>
+                    <option value="8">Ficção Científica</option>
+                </select>
+            </div>
+            
             <!-- Postagem -->
             <div class="postagem">
                 <h3>Título do Filme</h3>
