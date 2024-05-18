@@ -82,6 +82,7 @@ body {
     border: 1px solid #ff69b4;
     padding: 10px;
     margin: 10px 0;
+    display: inline-block;
 }
 
 .edit-button, .delete-button {
