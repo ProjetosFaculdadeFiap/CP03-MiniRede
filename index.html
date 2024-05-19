@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+    <title>CP03-Mini Rede Social</title>
+</head>
+<body>
+
+    <div class="container"> 
+        <header class="Cabecalho-Page">
+            <h1> Mini - Rede Social de Filmes </h1>
+        </header>
+
+        <!-- Para a Criação de Postagem-->
+        <div class="post-form">
+            <form id="">
+                <label for="titulo">Título do Filme:</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Digite seu título">
+
+                <label for="categoria">Categoria:</label>
+                <select id="categoria" name="categoria">
+                    <option value="0">Selecione à Categoria</option>
+                    <option value="1">Ação</option>
+                    <option value="2">Comédia</option>
+                    <option value="3">Drama</option>
+                    <option value="4">Romance</option>
+                    <option value="5">Documentário</option>
+                    <option value="6">Suspense</option>
+                    <option value="7">Terror</option>
+                    <option value="8">Ficção Científica</option>
+                </select>
+        
+                <label for="resenha">Resenha:</label>
+                <textarea id="resenha" name="resenha" placeholder="Digite a resenha do filme, avise se conter spoiler!"></textarea>
+
+                <label for="imagem">Coloque a capa do filme:</label>
+                <input type="text" id="imagem" name="imagem" placeholder="URL da Imagem">
+
+                <label for="imagem">Coloque uma imagem do filme:</label>
+                <input type="text" id="imagem" name="imagem" placeholder="URL da Imagem">
+
+                <label for="imagem">Coloque a foto de um ator que participou:</label>
+                <input type="text" id="imagem" name="imagem" placeholder="URL da Imagem">
+
+                <label for="estrelas">Quantas Estrelas?</label>
+                <select id="estrelas" name="estrelas">
+                    <option value="0">Selecione à quantidade de estrelas</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </form>     
+
+            <div> 
+                <input type="submit" value="Postar" class="btn-postar">
+            </div>
+        </div>
+
+        <!--Para a Visualização de postagens-->
+        <div class="postagens-feitas">
+            <h2>Postagens Feitas</h2>
+        
+            <!-- Postagem -->
+            <div class="postagem">
+                <h3>Título do Filme</h3>
+                <p>Categoria: Ação</p>
+                <p>Resenha: Este é um ótimo filme...</p>
+
+                <!-- URL -->
+
+                <p>Estrelas: 5</p>
+
+        
+                <button class="edit-button">Editar</button>
+                <button class="delete-button">Apagar</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,103 @@
+:root{
+    --color-white: #fff
+    --transition: .5s;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Criação do Post */
+.Cabecalho-Page {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff69b4;
+    color: white;
+    border-radius: 5px;
+}
+
+.post-form {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.post-form label {
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+.post-form input[type="text"], .post-form select, .post-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ff69b4;
+}
+
+.post-form input[type="submit"] {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.post-form input[type="submit"]:hover {
+    background-color: #ff1493;
+}
+
+/* Visualização dos posts */
+.postagens-feitas {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.postagem {
+    border: 1px solid #ff69b4;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.edit-button, .delete-button {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.edit-button:hover, .delete-button:hover {
+    background-color: #ff1493;
+}
