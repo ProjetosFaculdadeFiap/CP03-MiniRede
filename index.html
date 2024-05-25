@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="carousel.css">
     <title>CP03-Mini Rede Social</title>
 </head>
 <body>
@@ -91,6 +92,21 @@
 
                 <p>Estrelas: 5</p>
 
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://placehold.co/600x400/EEE/31343C" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://placehold.co/600x400/EEE/31343C" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://placehold.co/600x400/EEE/31343C" alt="Image 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control prev" onclick="prevSlide(this)">&#10094;</button>
+                    <button class="carousel-control next" onclick="nextSlide(this)">&#10095;</button>
+                </div>
         
                 <button class="edit-button">Editar</button>
                 <button class="delete-button">Apagar</button>
@@ -102,6 +118,7 @@
 
 
     <script src="index.js"></script>
+    <script src="carousel.js"></script>
 </body>
 </html>
 
