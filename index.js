@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function renderizarNaTela() {
-        listaPostagens.innerHTML = '';
+        listaPostagens.innerHTML = ``;
 
         // Variável para contar o número de cards renderizados
         let cardsRenderizados = 0;
@@ -80,8 +80,21 @@ document.addEventListener('DOMContentLoaded', () => {
             btnEditar.className = 'button';
             btnEditar.innerHTML = '<i class="fa-solid fa-pen-to-square"></i> <span>Editar</span>';
             btnEditar.addEventListener('click', function() {
-                // Função de edição a ser implementada
+                // chamado da função editar filme
+                editarFilme(listaPostagensArray.indexOf(filme))
             });
+
+            //Função para editar nome e resenha do filme
+            function editarFilme(idFilme){
+                //2 - Pegar as novas informações
+                const tituloModificado = prompt('Digite o novo titulo do filme:', listaPostagensArray[idFilme].nome)
+                const resenhaModificada = prompt('Digite a nova resenha do filme:', listaPostagensArray[idFilme].resenha)
+                //3 - Substituir
+                listaPostagensArray[idFilme].nome = tituloModificado
+                listaPostagensArray[idFilme].resenha = resenhaModificada
+                //4 - Renderizar a tela
+                renderizarNaTela()
+            }
 
             // Botão Remover
             let btnRemover = document.createElement('button');
@@ -89,8 +102,19 @@ document.addEventListener('DOMContentLoaded', () => {
             btnRemover.innerHTML = 'Remover';
             btnRemover.addEventListener('click', function() {
                 // Função de remoção a ser implementado
-            
+                excluirFilme(listaPostagensArray.indexOf(filme))
             });
+
+            function excluirFilme(idFilme){
+                //2 - Apagar o filme
+                confirmacao_exclusao = confirm("Você deseja mesma excluir esse filme?")
+
+                if(confirmacao_exclusao == true){
+                    listaPostagensArray.splice(idFilme, 1)
+                }
+                //3 - Atualizar na tela
+                renderizarNaTela()
+            }
 
             card.appendChild(cardTitle);
             card.appendChild(cardCategoria);
