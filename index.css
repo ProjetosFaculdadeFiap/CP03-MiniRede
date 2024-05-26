@@ -1,8 +1,14 @@
 :root{
     --color-white: #fff;
+    --color-pink: #ff69b4;
+    --color-pinkhover: #ff1493;
     --transition: .5s;
 }
-
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -21,7 +27,7 @@ body {
 .Cabecalho-Page {
     text-align: center;
     padding: 20px;
-    background-color: #ff69b4;
+    background-color: var(--color-pink);
     color: white;
     border-radius: 5px;
 }
@@ -42,17 +48,17 @@ body {
 
 .post-form label {
     font-weight: bold;
-    color: #ff69b4;
+    color: var(--color-pink);
 }
 
 .post-form input[type="text"], .post-form select, .post-form textarea {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ff69b4;
+    border: 1px solid var(--color-pink);
 }
 
 .post-form input[type="submit"] {
-    background-color: #ff69b4;
+    background-color:var(--color-pink);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -66,26 +72,64 @@ body {
 }
 
 .post-form input[type="submit"]:hover {
-    background-color: #ff1493;
+    background-color: var(--color-pinkhover);
 }
 
 /* Visualização dos posts */
 .postagens-feitas {
     background-color: #fff;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 15px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.postagem {
-    border: 1px solid #ff69b4;
-    padding: 10px;
-    margin: 10px 0;
+/* Configurando estilos dos card/post */
+#postagem{
+    margin-top: 10px;
+    color: var(--color-pink);
+
+ }
+
+.card{
+    margin: 15px auto;  
+}
+.card h2,p{
+    margin: 10px auto;
+}
+#resenha-content{
+    margin: 10px;
+}
+
+/* Divisão Posts */
+#listapostagens .card {
+    border-bottom: 2px solid #ccc; 
+    padding-bottom: 20px; 
+    width: 600px;
+}
+
+/* Timeline*/
+#listapostagens {
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap; 
+    overflow: hidden;
+    justify-content: center;
+
+    border-radius: 10px;
+    padding: 32px;
+    margin: 15px auto;
     display: inline-block;
 }
 
-.edit-button, .delete-button {
+/* Filtro */
+.filter-form{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* Botões */
+.button {
     background-color: #ff69b4;
     color: #fff;
     border: none;
@@ -97,8 +141,9 @@ body {
     margin: 10px 2px;
     cursor: pointer;
     border-radius: 5px;
+    
+    &:hover {
+    background-color: var(--color-pink);
+}
 }
 
-.edit-button:hover, .delete-button:hover {
-    background-color: #ff1493;
-}

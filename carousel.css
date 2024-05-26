@@ -1,9 +1,14 @@
 .postagem {
-    max-width: 600px;
+    width: 80%;
+    margin: 0 auto;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .carousel {
+    margin: 20px auto;
     position: relative;
     width: 100%;
 }
@@ -21,7 +26,9 @@
 
 .carousel-item img {
     width: 100%;
-    display: block;
+    height: 100%;
+    display: inline;
+    object-fit: cover;
 }
 
 .carousel-control {
